@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # Martin.Bell@uts.edu.au
 
 # Generic function for plotting light-curves and stats.
-def plot_lc(source):
+def plot_lc(self, source, filtered_raw_data):
     all = filtered_raw_data[filtered_raw_data.source_id == source]
     all = all.sort_values(by='jd')
     plt.figure(figsize=(7, 8))
